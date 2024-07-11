@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between p-5">
+    <nav className="flex justify-between p-5 items-center">
       <div>
-        <h1 className="text-2xl text-orange-400">Recipicity</h1>
+        <h1 className="text-2xl text-orange-400 font-bold">Recipicity</h1>
       </div>
-      <ul className="flex space-x-3 ">
+      <ul className="flex space-x-10">
         <li>
           <Link to="/" className="hover:text-orange-400">
             Home

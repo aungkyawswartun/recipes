@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors")
 const recipeRoutes = require("./routes/recipes");
 const { mongoose } = require("mongoose");
 require("dotenv").config();
@@ -13,7 +14,7 @@ mongoose.connect(mongoURL).then(() => {
     console.log("app is running on port : " + process.env.PORT);
   });
 });
-
+app.use(cors())
 app.use(express.json());
 app.use(morgan("dev"));
 
